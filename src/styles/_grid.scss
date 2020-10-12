@@ -1,0 +1,29 @@
+.header {
+  grid-area: header;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.main {
+  grid-area: main;
+}
+.right {
+  grid-area: right;
+}
+.footer {
+  grid-area: footer;
+}
+
+.grid__welcome {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.grid__welcome > div {
+  padding: 20px 0;
+}

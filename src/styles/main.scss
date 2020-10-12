@@ -1,0 +1,16 @@
+@import "./reset";
+@import "./fonts";
+@import "./grid";
+@import "./variables";
+@import "./mixins";
+
+body {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+}
