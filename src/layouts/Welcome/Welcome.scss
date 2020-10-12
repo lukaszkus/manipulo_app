@@ -12,14 +12,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 50px 0;
     .main__heading {
       h1 {
-        font-size: 72px;
+        font-size: 60px;
         margin-bottom: 20px;
         color: $color-text-primary;
       }
       p {
-        font-size: 40px;
+        font-size: 32px;
         font-weight: 300;
         margin-bottom: 20px;
         color: $color-text-primary;
@@ -27,8 +28,8 @@
     }
 
     button {
-      padding: 20px 50px;
-      font-size: 1.5em;
+      padding: 15px 40px;
+      font-size: 1.2em;
       font-weight: 400;
       color: $color-text-secondary;
       background: none;
@@ -45,16 +46,20 @@
   .footer {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-start;
+
     .copyright {
       display: flex;
       justify-content: flex-end;
       align-items: center;
       border-top: 1px solid $color-text-primary;
       width: 100%;
-      height: 100px;
+      padding-top: 10px;
+      p {
+        font-size: 12px;
+      }
       .footer__logo {
-        width: 100px;
+        width: 80px;
         padding-left: 10px;
       }
     }
