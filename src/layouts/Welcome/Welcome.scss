@@ -1,0 +1,78 @@
+@import "../../styles/main";
+
+/* Welcome */
+#welcome {
+  background-image: url("../../assets/bg.jpg");
+  background-size: cover;
+  background-color: $bgcolor-primary;
+  width: 100vw;
+  height: 100vh;
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .main__heading {
+      h1 {
+        font-size: 72px;
+        margin-bottom: 20px;
+        color: $color-text-primary;
+      }
+      p {
+        font-size: 40px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        color: $color-text-primary;
+      }
+    }
+
+    button {
+      padding: 20px 50px;
+      font-size: 1.5em;
+      font-weight: 400;
+      color: $color-text-secondary;
+      background: none;
+      border: 2px solid $color-text-secondary;
+      width: fit-content;
+      &:hover {
+        color: white;
+        background: $color-text-secondary;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    .copyright {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      border-top: 1px solid $color-text-primary;
+      width: 100%;
+      height: 100px;
+      .footer__logo {
+        width: 100px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+.animate {
+  opacity: 0;
+  animation: fadeIn 0.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
