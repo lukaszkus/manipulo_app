@@ -7,10 +7,10 @@
 body {
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 16px;
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1024px;
   margin: 0 auto;
-  height: 100vh;
 }

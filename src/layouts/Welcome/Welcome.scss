@@ -1,32 +1,30 @@
 @import "../../styles/main";
 
 /* Welcome */
-#welcome {
+.welcome {
   background-image: url("../../assets/bg.jpg");
   background-size: cover;
   background-color: $bgcolor-primary;
-  width: 100vw;
-  height: 100vh;
-
-  .main {
+  width: 100%;
+  height: 100%;
+  .main-left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 50px 0;
-    .main__heading {
+    padding: 40px 0;
+    .main-left__heading {
       h1 {
-        font-size: 60px;
-        margin-bottom: 20px;
+        font-size: 50px;
+        margin-bottom: 30px;
         color: $color-text-primary;
       }
       p {
-        font-size: 32px;
+        font-size: 27px;
         font-weight: 300;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         color: $color-text-primary;
       }
     }
-
     button {
       padding: 15px 40px;
       font-size: 1.2em;
@@ -34,7 +32,7 @@
       color: $color-text-secondary;
       background: none;
       border: 2px solid $color-text-secondary;
-      width: fit-content;
+      width: 100%;
       &:hover {
         color: white;
         background: $color-text-secondary;
@@ -42,12 +40,7 @@
       }
     }
   }
-
   .footer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-
     .copyright {
       display: flex;
       justify-content: flex-end;
@@ -66,10 +59,44 @@
   }
 }
 
+@media (min-width: 448px) {
+  .welcome {
+    .main-left {
+      .main-left__heading {
+        h1 {
+          font-size: 60px;
+        }
+        p {
+          font-size: 32px;
+        }
+      }
+      button {
+        width: fit-content;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .welcome {
+    .main-left {
+      button {
+        width: fit-content;
+      }
+    }
+    .footer {
+      .copyright {
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+/* Animate */
 .animate {
   opacity: 0;
-  animation: fadeIn 0.5s;
-  animation-delay: 1s;
+  animation: fadeIn 0.8s;
+  animation-delay: 1.2s;
   animation-fill-mode: forwards;
 }
 
