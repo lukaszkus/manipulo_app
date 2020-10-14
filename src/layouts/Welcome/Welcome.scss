@@ -11,23 +11,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 40px 0;
+    padding: 2.5rem 0;
     .main-left__heading {
       h1 {
-        font-size: 50px;
-        margin-bottom: 30px;
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
         color: $color-text-primary;
       }
       p {
-        font-size: 27px;
+        font-size: 1.625rem;
         font-weight: 300;
-        margin-bottom: 30px;
+        margin-bottom: 1.5rem;
         color: $color-text-primary;
       }
     }
     button {
       padding: 15px 40px;
-      font-size: 1.2em;
+      font-size: 20px;
       font-weight: 400;
       color: $color-text-secondary;
       background: none;
@@ -49,7 +49,7 @@
       width: 100%;
       padding-top: 10px;
       p {
-        font-size: 12px;
+        font-size: 0.75rem;
       }
       .footer__logo {
         width: 80px;
@@ -64,10 +64,10 @@
     .main-left {
       .main-left__heading {
         h1 {
-          font-size: 60px;
+          font-size: 3.75rem;
         }
         p {
-          font-size: 32px;
+          font-size: 2rem;
         }
       }
       button {
