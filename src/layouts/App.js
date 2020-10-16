@@ -1,17 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.scss';
-import Application from '../layouts/Application/Application'
-// import Welcome from '../layouts/Welcome/Welcome'
-
-// function App() {
-//   return (
-//     <Welcome />
-//   );
-// }
+import Welcome from '../layouts/Welcome/Welcome';
+import Application from '../layouts/Application/Application';
 
 function App() {
+  const [change, setChange] = useState(false);
+
+  const handleChange = () => {
+    setChange(true);
+  }
+
   return (
-    <Application />
+    <>
+      {change ? <Application /> : <Welcome click={handleChange}/>}
+    </>
   );
 }
 

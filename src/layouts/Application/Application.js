@@ -5,7 +5,7 @@ import logo from '../../assets/logo_mb.svg';
 function Application () {
     return (
         <div className="application">
-            <div className="grid-template-app">
+            <div className="grid-template-app animate">
               <div className="logo"><img src={logo} alt="Logo"/></div>
               <div className="header">header</div>
               <div className="sidebar">sidebar</div>
