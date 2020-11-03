@@ -1,0 +1,53 @@
+@import "../../styles/main";
+
+/* Dashboard */
+.dashboard {
+  background-color: $bgcolor-primary;
+
+  .dashboard__header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $color-text-primary-light;
+    padding: 10px;
+  }
+
+  .dashboard__logo {
+    align-items: center;
+    background-color: $bgcolor-secondary;
+    padding: 10px;
+  }
+
+  .dashboard__main {
+    // padding: 20px;
+    overflow-y: scroll;
+  }
+
+  .dashboard__sidebar {
+    background-color: $bgcolor-secondary;
+    padding: 20px;
+  }
+
+  .dashboard__price {
+    background-color: $bgcolor-secondary;
+    padding: 20px;
+  }
+
+  .dashboard__nav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .dashboard__footer {
+    display: flex;
+    align-items: center;
+    background-color: $bgcolor-secondary;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 540px) {
+  .dashboard__nav {
+    border-top: 1px solid $color-text-primary-light;
+  }
+}

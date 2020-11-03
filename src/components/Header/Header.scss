@@ -1,0 +1,16 @@
+@import "../../styles/main";
+
+/* Header */
+.header__dash {
+  // border-bottom: 1px solid $color-text-primary;
+  width: 100%;
+  .header__dash--step {
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    // margin-bottom: 10px;
+  }
+}

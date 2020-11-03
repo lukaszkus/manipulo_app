@@ -1,0 +1,80 @@
+@import "../../styles/main";
+
+.selectColor {
+  padding: 20px;
+  .selectColor__container {
+    .color-prices {
+      text-decoration: underline;
+      font-size: 1rem;
+    }
+    .boxes {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0;
+      .selectColor__box {
+        padding-right: 20px;
+        .color-box {
+          width: 50px;
+          height: 50px;
+          &:hover {
+            border: 3px solid yellow;
+            cursor: pointer;
+          }
+        }
+        .color-name {
+          width: 50px;
+          font-size: 0.75rem;
+          margin-top: 5px;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.white {
+  background-color: white;
+}
+.light-grey {
+  background-color: lightgrey;
+}
+.dark-grey {
+  background-color: rgb(56, 56, 56);
+}
+.black {
+  background-color: black;
+}
+.light-blue {
+  background-color: lightblue;
+}
+.blue {
+  background-color: blue;
+}
+.pink {
+  background-color: pink;
+}
+.red {
+  background-color: red;
+}
+
+@media (min-width: 540px) {
+  .selectColor {
+    display: flex;
+    .selectColor__container {
+      width: 50%;
+      .boxes {
+        .selectColor__box {
+          padding-right: 30px;
+          .color-box {
+            width: 60px;
+            height: 60px;
+          }
+          .color-name {
+            width: 60px;
+          }
+        }
+      }
+    }
+  }
+}

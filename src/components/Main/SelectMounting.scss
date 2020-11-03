@@ -1,0 +1,47 @@
+@import "../../styles/main";
+
+.selectMounting {
+  padding: 10px;
+  .selectMounting__container {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    .mounting__title {
+      text-decoration: underline;
+      font-size: 1rem;
+    }
+    .mounting__img {
+      padding: 5px;
+      img {
+      max-width: 100%;
+      height: auto;
+      &:hover {
+        background-color: yellow;
+        border-radius: 10px;
+      }   
+    }
+  }
+  .mounting__description {
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.2rem;
+  }              
+  }
+}
+
+@media (min-width: 540px) {
+  .selectMounting {
+    display: flex;
+  .selectMounting__container {
+    width: 50%;
+     .mounting__img {
+       img {
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        }
+      }
+    }
+  }
+}

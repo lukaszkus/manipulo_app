@@ -1,0 +1,67 @@
+@import "./variables";
+
+.dashboard__logo {
+  grid-area: logo;
+  display: none;
+}
+.dashboard__header {
+  grid-area: header;
+}
+.dashboard__sidebar {
+  grid-area: sidebar;
+  display: none;
+}
+.dashboard__price {
+  grid-area: price;
+}
+.dashboard__main {
+  grid-area: main;
+}
+.dashboard__footer {
+  grid-area: footer;
+}
+.dashboard__nav {
+  grid-area: nav;
+}
+
+.dashboard-grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(9, 1fr);
+  grid-template-areas:
+    "header header"
+    "main main"
+    "main main"
+    "main main"
+    "main main"
+    "main main"
+    "price price"
+    "nav nav"
+    "footer footer";
+  column-gap: 10px;
+}
+
+@media (min-width: 540px) {
+  .dashboard__logo,
+  .dashboard__sidebar {
+    display: flex;
+  }
+  .dashboard-grid {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "logo logo header header header header header header"
+      "sidebar sidebar main main main main main main"
+      "sidebar sidebar main main main main main main"
+      "sidebar sidebar main main main main main main"
+      "price price main main main main main main"
+      "footer footer nav nav nav nav nav nav";
+    padding-right: 10px;
+  }
+}
+
+// @media (min-width: 1024px) {
+ 
+   
+// }

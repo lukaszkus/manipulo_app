@@ -1,6 +1,7 @@
 @import "./reset";
 @import "./fonts";
-@import "./grid";
+@import "./welcome-grid";
+@import "./dashboard-grid";
 @import "./variables";
 @import "./mixins";
 
@@ -16,4 +17,21 @@ body {
 .container {
   max-width: 1024px;
   margin: 0 auto;
+}
+
+/* Animate */
+.animate {
+  opacity: 0;
+  animation: fadeIn 0.8s;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

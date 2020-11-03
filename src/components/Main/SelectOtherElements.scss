@@ -1,0 +1,59 @@
+@import "../../styles/main";
+
+.selectOther {
+  padding: 10px;
+  .selectOther__container {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    .selectOther__title {
+      text-decoration: underline;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    .selectOther__img {
+      padding: 20px;
+      img {
+      max-width: 100%;
+      height: auto;
+      }
+    }
+    .selectOther__description {
+      font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.2rem;
+    }
+    form {
+        padding: 0 10px;
+        label {
+            font-size: 0.75rem;
+            input,
+            textarea {
+                padding: 10px;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    }
+
+  }
+}
+
+
+
+@media (min-width: 540px) {
+  .selectOther {
+    display: flex;
+  .selectOther__container {
+    width: 50%;
+     .selectOther__img {
+       img {
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        }
+      }
+    }
+  }
+}
