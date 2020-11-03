@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../../components/Main/SelectOtherElements.scss'
 import woodenHouse from '../../assets/domek.png';
 
