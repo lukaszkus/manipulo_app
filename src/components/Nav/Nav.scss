@@ -20,5 +20,19 @@
         cursor: pointer;
       }
     }
+    .btn-submit {
+      border: 2px solid red;
+      color: red;
+      &:hover {
+        color: white;
+        background: red;
+      }
+    }
+  }
+  .btn-right {
+    display: flex;
+    justify-content: flex-end;
   }
 }
+
+

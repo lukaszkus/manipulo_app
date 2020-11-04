@@ -1,0 +1,41 @@
+@import "../../styles/main";
+
+.selectShipping {
+  padding: 10px;
+  .selectShipping__container {
+    padding: 10px;
+    width: 100%;
+    // margin-bottom: 20px;
+    .selectShipping__title {
+      text-decoration: underline;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    .selectShipping__description {
+      font-weight: 300;
+      font-size: 0.875rem;
+      line-height: 1.2rem;
+      margin: 20px 0;
+    }.selectShipping__list {
+        list-style: none;
+        font-weight: 500;
+        li {
+            margin: 20px 0;
+            display: flex;
+            width: 80%;
+            input {
+                margin-right: 5px;
+            }
+        }
+    }
+  }
+}
+
+@media (min-width: 540px) {
+  .selectShipping {
+    display: flex;
+    .selectShipping__container {
+      width: 50%;
+    }
+  }
+}

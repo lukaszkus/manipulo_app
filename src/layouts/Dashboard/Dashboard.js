@@ -76,7 +76,7 @@ function Dashboard() {
           <Copyright />
         </div>
         <div className="dashboard__nav">
-          <Nav nextStep={nextStep} prevStep={prevStep} />
+          <Nav nextStep={nextStep} prevStep={prevStep} step={currentStep} />
         </div>
       </div>
     </div>

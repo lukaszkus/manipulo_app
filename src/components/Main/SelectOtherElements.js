@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../components/Main/SelectOtherElements.scss'
 import woodenHouse from '../../assets/domek.png';
+import ImageUploader from "react-images-upload";
 
 function SelectOtherElements({ mainColor, setMainColor }) {
+    const [pictures, setPictures] = useState([]);
+
+    const onDrop = picture => {
+        setPictures([...pictures, picture]);
+    };
 
     return (
         <div className="animate">
@@ -24,7 +30,7 @@ function SelectOtherElements({ mainColor, setMainColor }) {
                         </label>
                         <label>
                             Uwagi
-                            <textarea type="text" rows="10" value={mainColor} onChange={(e) => setMainColor(e.target.value)} />
+                            <textarea type="text" rows="15" value={mainColor} onChange={(e) => setMainColor(e.target.value)} />
                         </label>
                     </form>
                 </div>
@@ -36,6 +42,19 @@ function SelectOtherElements({ mainColor, setMainColor }) {
                         <br /><br />
                         Zdjęcie powinno być w orientacji poziomej.
                     </p>
+                    <p className="selectOther__title">Dodaj swoje zdjęcie</p>
+                    <ImageUploader
+                        className="imageUploader"
+                        buttonClassName="imageUploader__btn"
+                        buttonText={"Dodaj zdjęcie"}
+                        label={"Max. wielkość pliku: 5mb, Format: jpg | png"}
+                        withIcon={true}
+                        onChange={onDrop}
+                        singleImage={true}
+                        withPreview={true}
+                        imgExtension={[".jpg", ".png"]}
+                        maxFileSize={5242880}
+                    />
                 </div>
             </div>
         </div>
