@@ -14,8 +14,8 @@
     .selectOther__img {
       margin-bottom: 20px;
       img {
-      max-width: 100%;
-      height: auto;
+        max-width: 100%;
+        height: auto;
       }
     }
     .selectOther__description {
@@ -25,52 +25,49 @@
       margin-bottom: 40px;
     }
     form {
-        padding: 0 10px;
-        label {
-            font-size: 0.75rem;
-            input,
-            textarea {
-                padding: 10px;
-                width: 100%;
-                margin: 10px 0;
-            }
+      padding: 0 10px;
+      label {
+        font-size: 0.75rem;
+        input,
+        textarea {
+          padding: 10px;
+          width: 100%;
+          margin: 10px 0;
+          font-size: 1rem;
         }
+      }
     }
     .imageUploader {
       .imageUploader__btn {
-      padding: 10px 20px;
-      font-size: 0.875rem;
-      font-weight: 400;
-      color: $color-text-secondary;
-      background: none;
-      border: 2px solid $color-text-secondary;
-      border-radius: 0;
-      width: fit-content;
-      &:hover {
-        color: white;
-        background: $color-text-secondary;
-        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: $color-text-secondary;
+        background: none;
+        border: 2px solid $color-text-secondary;
+        border-radius: 0;
+        width: fit-content;
+        &:hover {
+          color: white;
+          background: $color-text-secondary;
+          cursor: pointer;
+        }
       }
-    } 
-    }  
+    }
   }
 }
-
-
-
-
 
 @media (min-width: 540px) {
   .selectOther {
     display: flex;
-  .selectOther__container {
-    width: 50%;
-     .selectOther__img {
-       img {
-        max-width: 300px;
-        height: auto;
-        margin: 0 auto;
-        display: block;
+    .selectOther__container {
+      width: 50%;
+      .selectOther__img {
+        img {
+          max-width: 300px;
+          height: auto;
+          margin: 0 auto;
+          display: block;
         }
       }
     }

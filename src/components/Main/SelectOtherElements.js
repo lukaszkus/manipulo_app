@@ -18,19 +18,19 @@ function SelectOtherElements({ mainColor, setMainColor }) {
                     <form>
                         <label>
                             Kolor główny
-                            <input type="text" value={mainColor} onChange={(e) => setMainColor(e.target.value)} />
+                            <input type="text"   />
                         </label>
                         <label>
                             Kolory dodatkowe
-                            <input type="text" value={mainColor} onChange={(e) => setMainColor(e.target.value)} />
+                            <input type="text"   />
                         </label>
                         <label>
                             Motyw
-                            <input type="text" value={mainColor} onChange={(e) => setMainColor(e.target.value)} />
+                            <input type="text"   />
                         </label>
                         <label>
                             Uwagi
-                            <textarea type="text" rows="15" value={mainColor} onChange={(e) => setMainColor(e.target.value)} />
+                            <textarea type="text" rows="12"   />
                         </label>
                     </form>
                 </div>
