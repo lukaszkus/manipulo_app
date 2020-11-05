@@ -13,20 +13,26 @@ function SelectMounting({ onSelectionMounting, setPrice }) {
                         setPrice(0);
                     }}>
                     <p className="mounting__title">Do ściany</p>
-                    <div className="mounting__img"><img src={toTheWall} alt="Do ściany" /></div>
+                    <div className="mounting__img">
+                        <input type="radio" id="toTheWall" name="mounting" />
+                        <label htmlFor="toTheWall"><img src={toTheWall} alt="Do ściany" /></label>
+                    </div>
                     <p className="mounting__description">
                         W płycie nawiercone są otwory przez które należy przykręcić tablicę do ściany.
                         Do tablicy dołączamy wkręty, kołki rozporowe oraz estetyczne zaślepki maskujące wkręty.
                         Nie pobieramy za nie dodatkowych opłat.
                     </p>
                 </div>
-                <div className="selectMounting__container"
-                    onClick={() => {
-                        onSelectionMounting("na podporach");
-                        setPrice(10);
-                    }}>
-                    <p className="mounting__title">Na podporach (+ 10 zł)</p>
-                    <div className="mounting__img"><img src={onSupports} alt="Na podporach" /></div>
+                <div className="selectMounting__container">
+                    <p className="mounting__title">Na podporach</p>
+                    <div className="mounting__img"
+                        onClick={() => {
+                            onSelectionMounting("na podporach");
+                            setPrice(10);
+                        }}>
+                        <input type="radio" id="onSupports" name="mounting" />
+                        <label htmlFor="onSupports"><img src={onSupports} alt="Na podporach" /></label>
+                    </div>
                     <p className="mounting__description">
                         Z tyłu przykręcone są składane, drewniane podpory dzięki którym tablica
                         stabilnie opiera się na podłożu. Plusem tego rozwiązanie jest możliwość przenoszenia

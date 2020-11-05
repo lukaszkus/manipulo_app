@@ -5,28 +5,73 @@
   .selectMounting__container {
     padding: 10px;
     width: 100%;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     .mounting__title {
       text-decoration: underline;
       font-size: 1rem;
     }
     .mounting__img {
-      padding: 5px;
-      img {
-      max-width: 100%;
-      height: auto;
-      &:hover {
-        background-color: yellow;
-        border-radius: 10px;
-      }   
-    }
+      width: 70%;
+      margin: 0 auto;
+      input {
+          display: none;
+        }
+        label {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: relative;
+          cursor: pointer;
+        }
+
+        label:after {
+          background-color: white;
+          color: white;
+          content: " ";
+          display: block;
+          border-radius: 50%;
+          border: 1px solid grey;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 25px;
+          height: 25px;
+          text-align: center;
+          line-height: 26px;
+          transition-duration: 0.4s;
+          transform: scale(0);
+        }
+
+        label img {
+          height: 100%;
+          width: 100%;
+          transition-duration: 0.2s;
+          transform-origin: 50% 50%;
+        }
+
+        :checked + label {
+          border-color: #ddd;
+        }
+
+        :checked + label:after {
+          content: "✓";
+          background-color: grey;
+          transform: scale(1);
+        }
+
+        :checked + label img {
+          transform: scale(0.9);
+          z-index: 999;
+        }
+      }
+
   }
   .mounting__description {
     font-weight: 300;
     font-size: 0.875rem;
     line-height: 1.2rem;
   }              
-  }
+  
 }
 
 @media (min-width: 540px) {
@@ -34,14 +79,14 @@
     display: flex;
   .selectMounting__container {
     width: 50%;
-     .mounting__img {
-       img {
-        max-width: 300px;
-        height: auto;
-        margin: 0 auto;
-        display: block;
-        }
-      }
+    //  .mounting__img {
+    //    img {
+    //     max-width: 300px;
+    //     height: auto;
+    //     margin: 0 auto;
+    //     display: block;
+    //     }
+    //   }
     }
   }
 }
