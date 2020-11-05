@@ -12,7 +12,9 @@
       margin-bottom: 20px;
     }
     .selectOther__img {
-      margin-bottom: 20px;
+      padding: 10px;
+      width: 70%;
+      margin: 0 auto;
       img {
         max-width: 100%;
         height: auto;
@@ -63,10 +65,10 @@
     .selectOther__container {
       width: 50%;
       .selectOther__img {
+        padding: 20px;
         img {
-          max-width: 300px;
+          max-width: 100%;
           height: auto;
-          margin: 0 auto;
           display: block;
         }
       }
