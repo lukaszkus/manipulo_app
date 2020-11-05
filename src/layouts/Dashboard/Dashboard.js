@@ -40,7 +40,7 @@ function Dashboard() {
       <div className="dashboard-grid animate">
         <div className="dashboard__logo">
           <Logo />
-          <p>| Konfigurator</p>
+          <p className="logo__title">| Konfigurator</p>
         </div>
         <div className="dashboard__header">
           <Header step={currentStep} />

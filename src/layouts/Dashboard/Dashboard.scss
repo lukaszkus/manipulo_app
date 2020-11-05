@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid $color-text-primary-light;
-    padding: 10px;
+    padding: 20px;
   }
 
   .dashboard__logo {
@@ -35,7 +35,7 @@
   .dashboard__nav {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
   }
 
   .dashboard__footer {
@@ -47,6 +47,12 @@
 }
 
 @media (min-width: 540px) {
+  .dashboard__logo {
+    .logo__title {
+      font-size: 1.2rem;
+
+    }
+  }
   .dashboard__nav {
     border-top: 1px solid $color-text-primary-light;
   }

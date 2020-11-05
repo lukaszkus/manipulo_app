@@ -28,14 +28,15 @@
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(9, 1fr);
+  // grid-template-rows: repeat(9, 1fr);
+  grid-template-rows: 1fr 6fr 0.5fr 1fr 0.5fr;
   grid-template-areas:
     "header header"
     "main main"
-    "main main"
-    "main main"
-    "main main"
-    "main main"
+    // "main main"
+    // "main main"
+    // "main main"
+    // "main main"
     "price price"
     "nav nav"
     "footer footer";
@@ -62,6 +63,5 @@
 }
 
 // @media (min-width: 1024px) {
- 
-   
+
 // }
