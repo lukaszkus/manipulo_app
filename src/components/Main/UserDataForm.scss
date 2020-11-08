@@ -16,9 +16,9 @@
       label {
         font-size: 0.75rem;
         input {
-          padding: 10px;
+          padding: 8px;
           width: 100%;
-          margin: 10px 0;
+          margin: 8px 0;
           font-size: 1rem;
         }
       }
@@ -31,6 +31,9 @@
     display: flex;
     .userDF__container {
       width: 50%;
+      form {
+        padding: 0 20px;
+      }
     }
   }
 }

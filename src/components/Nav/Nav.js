@@ -1,7 +1,7 @@
 import React from 'react';
 import './Nav.scss';
 
-function Nav({ step, prevStep, nextStep }) {
+function Nav({ step, prevStep, nextStep, sendEmail }) {
   return (
     <div className="dash__nav">
       {step === 1 &&
@@ -42,7 +42,7 @@ function Nav({ step, prevStep, nextStep }) {
       {step === 7 &&
         <div className="navigation">
           <button onClick={prevStep}>{'<<'} WRÓĆ</button>
-          <button onClick={nextStep}>WYŚLIJ</button>
+          <button type="submit">WYŚLIJ</button>
         </div>
       }
     </div>

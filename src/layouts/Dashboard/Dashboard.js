@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Dashboard.scss';
+// import emailjs from 'emailjs-com';
 
 import Header from '../../components/Header/Header';
 import Logo from '../../components/Logo/Logo';
@@ -14,6 +15,7 @@ import UserDataForm from '../../components/Main/UserDataForm';
 import OrderSummary from '../../components/Main/OrderSummary';
 import UserConfiguration from '../../components/Sidebar/UserConfiguration';
 import Price from '../../components/Price/Price';
+
 
 function Dashboard() {
   const [step, setStep] = useState(1);
@@ -45,40 +47,46 @@ function Dashboard() {
   const [city, setCity] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [shippingName, setShippingName] = useState("")
+
+
 
 
   const nextStep = () => {
-    if (step === 1 && color.length === 0) {
-      alert("Nie wybrano koloru")
-    } else if (step === 1) {
+    if (step <= 6) {
       setStep((prevState) => prevState + 1)
-    }
-    if (step === 2 && elements.length === 0) {
-      alert("Wybierz co najmniej jeden element")
-    } else if (step === 2) {
-      setStep((prevState) => prevState + 1)
-    }
-    if (step === 3 && mounting.length === 0) {
-      alert("Wybierz sposób montażu")
-    } else if (step === 3) {
-      setStep((prevState) => prevState + 1)
-    }
-    if (step === 4 && mainColor.length === 0) {
-      alert("Podaj kolor główny i dodatkowe")
-    } else if (step === 4) {
-      setStep((prevState) => prevState + 1)
-    }
-    if (step === 5 && shipping.length === 0) {
-      alert("Wybierz sposób wysyłki")
-    } else if (step === 5) {
-      setStep((prevState) => prevState + 1)
-    }
-    if (step === 6 && name.length === 0) {
-      alert("Podaj swoje dane")
-    } else if (step === 6) {
-      setStep((prevState) => prevState + 1)
-    }
-  };
+      // if (step === 1 && color.length === 0) {
+      //   alert("Nie wybrano koloru")
+      // } else if (step === 1) {
+      //   setStep((prevState) => prevState + 1)
+      // }
+      // if (step === 2 && elements.length === 0) {
+      //   alert("Wybierz co najmniej jeden element")
+      // } else if (step === 2) {
+      //   setStep((prevState) => prevState + 1)
+      // }
+      // if (step === 3 && mounting.length === 0) {
+      //   alert("Wybierz sposób montażu")
+      // } else if (step === 3) {
+      //   setStep((prevState) => prevState + 1)
+      // }
+      // if (step === 4 && mainColor.length === 0) {
+      //   alert("Podaj kolor główny i dodatkowe")
+      // } else if (step === 4) {
+      //   setStep((prevState) => prevState + 1)
+      // }
+      // if (step === 5 && shipping.length === 0) {
+      //   alert("Wybierz sposób wysyłki")
+      // } else if (step === 5) {
+      //   setStep((prevState) => prevState + 1)
+      // }
+      // if (step === 6 && name.length === 0) {
+      //   alert("Podaj swoje dane")
+      // } else if (step === 6) {
+      //   setStep((prevState) => prevState + 1)
+      // }
+    };
+  }
   const prevStep = () => {
     if (step !== 1) {
       setStep((prevState) => prevState - 1)
@@ -145,8 +153,10 @@ function Dashboard() {
             city={city} setCity={setCity}
             email={email} setEmail={setEmail}
             phone={phone} setPhone={setPhone}
+            shippingName={shippingName} setShippingName={setShippingName}
           />}
           {step === 7 && <OrderSummary
+            price={price}
             color={color}
             elements={elements}
             mounting={mounting}
@@ -160,9 +170,7 @@ function Dashboard() {
             city={city}
             email={email}
             phone={phone}
-
-
-          />}
+            shippingName={shippingName} />}
         </div>
         <div className="dashboard__footer">
           <Copyright />
