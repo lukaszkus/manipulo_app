@@ -53,40 +53,38 @@ function Dashboard() {
 
 
   const nextStep = () => {
-    if (step <= 6) {
+    if (step === 1 && color.length === 0) {
+      alert("Nie wybrano koloru")
+    } else if (step === 1) {
       setStep((prevState) => prevState + 1)
-      // if (step === 1 && color.length === 0) {
-      //   alert("Nie wybrano koloru")
-      // } else if (step === 1) {
-      //   setStep((prevState) => prevState + 1)
-      // }
-      // if (step === 2 && elements.length === 0) {
-      //   alert("Wybierz co najmniej jeden element")
-      // } else if (step === 2) {
-      //   setStep((prevState) => prevState + 1)
-      // }
-      // if (step === 3 && mounting.length === 0) {
-      //   alert("Wybierz sposób montażu")
-      // } else if (step === 3) {
-      //   setStep((prevState) => prevState + 1)
-      // }
-      // if (step === 4 && mainColor.length === 0) {
-      //   alert("Podaj kolor główny i dodatkowe")
-      // } else if (step === 4) {
-      //   setStep((prevState) => prevState + 1)
-      // }
-      // if (step === 5 && shipping.length === 0) {
-      //   alert("Wybierz sposób wysyłki")
-      // } else if (step === 5) {
-      //   setStep((prevState) => prevState + 1)
-      // }
-      // if (step === 6 && name.length === 0) {
-      //   alert("Podaj swoje dane")
-      // } else if (step === 6) {
-      //   setStep((prevState) => prevState + 1)
-      // }
-    };
-  }
+    }
+    if (step === 2 && elements.length === 0) {
+      alert("Wybierz co najmniej jeden element")
+    } else if (step === 2) {
+      setStep((prevState) => prevState + 1)
+    }
+    if (step === 3 && mounting.length === 0) {
+      alert("Wybierz sposób montażu")
+    } else if (step === 3) {
+      setStep((prevState) => prevState + 1)
+    }
+    if (step === 4 && mainColor.length === 0) {
+      alert("Podaj kolor główny i dodatkowe")
+    } else if (step === 4) {
+      setStep((prevState) => prevState + 1)
+    }
+    if (step === 5 && shipping.length === 0) {
+      alert("Wybierz sposób wysyłki")
+    } else if (step === 5) {
+      setStep((prevState) => prevState + 1)
+    }
+    if (step === 6 && name.length === 0) {
+      alert("Podaj swoje dane")
+    } else if (step === 6) {
+      setStep((prevState) => prevState + 1)
+    }
+  };
+
   const prevStep = () => {
     if (step !== 1) {
       setStep((prevState) => prevState - 1)

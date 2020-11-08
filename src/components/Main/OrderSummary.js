@@ -46,7 +46,7 @@ function OrderSummary({ color, price, elements, mounting, mainColor, spotColors,
                         <p>Kod pocztowy: {postCode}</p>
                         <p>Miejscowość: {city}</p>
 
-
+                        {/* 
                         <input type="hidden" name={contact_number} />
                         <input type="hidden" name="" />
                         <label>Name</label>
@@ -55,7 +55,7 @@ function OrderSummary({ color, price, elements, mounting, mainColor, spotColors,
                         <input type="email" name="user_email" />
                         <label>Message</label>
                         <textarea name="message" />
-                        <input type="submit" value="Send" />
+                        <input type="submit" value="Send" /> */}
                     </form>
                 </div>
             </div>
