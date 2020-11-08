@@ -1,14 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../../components/Main/SelectOtherElements.scss'
 import woodenHouse from '../../assets/domek.png';
 import ImageUploader from "react-images-upload";
 
-function SelectOtherElements({ mainColor, setMainColor }) {
-    const [pictures, setPictures] = useState([]);
+function SelectOtherElements({ mainColor, setMainColor, spotColors, setSpotColors, theme, setTheme, comment, setComment, onDrop }) {
 
-    const onDrop = picture => {
-        setPictures([...pictures, picture]);
-    };
+
 
     return (
         <div className="animate">
@@ -18,19 +15,19 @@ function SelectOtherElements({ mainColor, setMainColor }) {
                     <form>
                         <label>
                             Kolor główny
-                            <input type="text"   />
+                            <input type="text" value={mainColor} onChange={(e) => setMainColor(e.target.value)} />
                         </label>
                         <label>
                             Kolory dodatkowe
-                            <input type="text"   />
+                            <input type="text" value={spotColors} onChange={(e) => setSpotColors(e.target.value)} />
                         </label>
                         <label>
                             Motyw
-                            <input type="text"   />
+                            <input type="text" value={theme} onChange={(e) => setTheme(e.target.value)} />
                         </label>
                         <label>
                             Uwagi
-                            <textarea type="text" rows="12"   />
+                            <textarea type="text" rows="12" value={comment} onChange={(e) => setComment(e.target.value)} />
                         </label>
                     </form>
                 </div>

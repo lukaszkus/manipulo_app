@@ -16,22 +16,72 @@ import UserConfiguration from '../../components/Sidebar/UserConfiguration';
 import Price from '../../components/Price/Price';
 
 function Dashboard() {
-  const [currentStep, setCurrentStep] = useState(1);
-  const [selectedColor, setSelectedColor] = useState(null);
-  const [currentPrice, setCurrentPrice] = useState(0);
-  const [selectedElements, setSelectedElements] = useState(null);
-  const [selectedMounting, setSelectedMounting] = useState(null);
+  const [step, setStep] = useState(1);
+  const [color, setColor] = useState("");
+  const [price, setPrice] = useState(0);
+  const [elements, setElements] = useState([]);
+  const [mounting, setMounting] = useState("");
+
+
+  //SelectOtherElements states
   const [mainColor, setMainColor] = useState("");
+  const [spotColors, setSpotColors] = useState("");
+  const [theme, setTheme] = useState("");
+  const [comment, setComment] = useState("");
+
+  const [pictures, setPictures] = useState([]);
+
+  const onDrop = picture => {
+    setPictures([...pictures, picture]);
+  };
+
+  const [shipping, setShipping] = useState("");
+
+
+  //UserDataForm states
+  const [name, setName] = useState("");
+  const [adress, setAdress] = useState("")
+  const [postCode, setPostCode] = useState("");
+  const [city, setCity] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
 
   const nextStep = () => {
-    if (currentStep <= 6) {
-      setCurrentStep((prevState) => prevState + 1)
+    if (step === 1 && color.length === 0) {
+      alert("Nie wybrano koloru")
+    } else if (step === 1) {
+      setStep((prevState) => prevState + 1)
+    }
+    if (step === 2 && elements.length === 0) {
+      alert("Wybierz co najmniej jeden element")
+    } else if (step === 2) {
+      setStep((prevState) => prevState + 1)
+    }
+    if (step === 3 && mounting.length === 0) {
+      alert("Wybierz sposób montażu")
+    } else if (step === 3) {
+      setStep((prevState) => prevState + 1)
+    }
+    if (step === 4 && mainColor.length === 0) {
+      alert("Podaj kolor główny i dodatkowe")
+    } else if (step === 4) {
+      setStep((prevState) => prevState + 1)
+    }
+    if (step === 5 && shipping.length === 0) {
+      alert("Wybierz sposób wysyłki")
+    } else if (step === 5) {
+      setStep((prevState) => prevState + 1)
+    }
+    if (step === 6 && name.length === 0) {
+      alert("Podaj swoje dane")
+    } else if (step === 6) {
+      setStep((prevState) => prevState + 1)
     }
   };
   const prevStep = () => {
-    if (currentStep !== 1) {
-      setCurrentStep((prevState) => prevState - 1)
+    if (step !== 1) {
+      setStep((prevState) => prevState - 1)
     }
   };
 
@@ -43,40 +93,82 @@ function Dashboard() {
           <p className="logo__title">| Konfigurator</p>
         </div>
         <div className="dashboard__header">
-          <Header step={currentStep} />
+          <Header step={step} />
         </div>
         <div className="dashboard__sidebar">
           <UserConfiguration
-            color={selectedColor}
-            elements={selectedElements}
-            mounting={selectedMounting} />
+            color={color}
+            elements={elements}
+            mounting={mounting}
+            mainColor={mainColor}
+            spotColors={spotColors}
+            pictures={pictures}
+            shipping={shipping}
+            name={name}
+            adress={adress}
+            postCode={postCode}
+            city={city}
+            email={email}
+            phone={phone} />
         </div>
         <div className="dashboard__price">
-          <Price price={currentPrice} setPrice={setCurrentPrice} />
+          <Price price={price} setPrice={setPrice} />
         </div>
         <div className="dashboard__main">
-          {currentStep === 1 && <SelectColor
-            color={selectedColor}
-            onSelection={setSelectedColor}
-            setPrice={setCurrentPrice} />}
-          {currentStep === 2 && <SelectElements
-            elements={selectedElements}
-            setSelectedElements={setSelectedElements}
-            setPrice={setCurrentPrice} />}
-          {currentStep === 3 && <SelectMounting
-            mounting={selectedMounting}
-            onSelectionMounting={setSelectedMounting}
-            setPrice={setCurrentPrice} />}
-          {currentStep === 4 && <SelectOtherElements mainColor={mainColor} setMainColor={setMainColor} />}
-          {currentStep === 5 && <SelectShipping />}
-          {currentStep === 6 && <UserDataForm />}
-          {currentStep === 7 && <OrderSummary />}
+          {step === 1 &&
+            <SelectColor
+              color={color} setColor={setColor}
+              price={price} setPrice={setPrice} />}
+          {step === 2 &&
+            <SelectElements
+              elements={elements} setElements={setElements}
+              price={price} setPrice={setPrice} />}
+          {step === 3 &&
+            <SelectMounting
+              mounting={mounting} setMounting={setMounting}
+              price={price} setPrice={setPrice} />}
+          {step === 4 &&
+            <SelectOtherElements
+              mainColor={mainColor} setMainColor={setMainColor}
+              spotColors={spotColors} setSpotColors={setSpotColors}
+              theme={theme} setTheme={setTheme}
+              comment={comment} setComment={setComment}
+              onDrop={onDrop}
+              pictures={pictures} setPictures={setPictures} />}
+          {step === 5 && <SelectShipping
+            shipping={shipping} setShipping={setShipping}
+            price={price} setPrice={setPrice} />}
+          {step === 6 && <UserDataForm
+            name={name} setName={setName}
+            adress={adress} setAdress={setAdress}
+            postCode={postCode} setPostCode={setPostCode}
+            city={city} setCity={setCity}
+            email={email} setEmail={setEmail}
+            phone={phone} setPhone={setPhone}
+          />}
+          {step === 7 && <OrderSummary
+            color={color}
+            elements={elements}
+            mounting={mounting}
+            mainColor={mainColor}
+            spotColors={spotColors}
+            pictures={pictures}
+            shipping={shipping}
+            name={name}
+            adress={adress}
+            postCode={postCode}
+            city={city}
+            email={email}
+            phone={phone}
+
+
+          />}
         </div>
         <div className="dashboard__footer">
           <Copyright />
         </div>
         <div className="dashboard__nav">
-          <Nav nextStep={nextStep} prevStep={prevStep} step={currentStep} />
+          <Nav nextStep={nextStep} prevStep={prevStep} step={step} />
         </div>
       </div>
     </div>

@@ -3,16 +3,21 @@
 .selectColor {
   padding: 20px;
   .selectColor__container {
+    .colors__title {
+      text-decoration: underline;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
     .colors__list {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
       list-style: none;
       li {
-        margin: 10px 13px;
+        margin: 10px 20px;
         .color-box {
-        width: 80px;
-        height: 80px;
+        width: 65px;
+        height: 65px;
         display: block;
         input {
           display: none;
@@ -61,7 +66,7 @@
         }
       }
       .color-name {
-          width: 80px;
+          width: 65px;
           font-size: 0.75rem;
           margin-top: 5px;
           margin-bottom: 10px;
@@ -73,7 +78,7 @@
 }
 
 
-@media (min-width: 540px) {
+@media (min-width: 748px) {
   .selectColor {
     .selectColor__container {
       .colors__list {

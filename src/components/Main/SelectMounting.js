@@ -3,17 +3,17 @@ import './SelectMounting.scss'
 import toTheWall from '../../assets/montaz-do-sciany.png';
 import onSupports from '../../assets/montaz-podpory.png';
 
-function SelectMounting({ onSelectionMounting, setPrice }) {
+function SelectMounting({ setMounting, price, setPrice }) {
     return (
         <div className="animate">
             <div className="selectMounting">
-                <div className="selectMounting__container"
-                    onClick={() => {
-                        onSelectionMounting("do ściany");
-                        setPrice(0);
-                    }}>
+                <div className="selectMounting__container">
                     <p className="mounting__title">Do ściany</p>
-                    <div className="mounting__img">
+                    <div className="mounting__img"
+                        onClick={() => {
+                            setMounting("do ściany");
+                            setPrice((prevState) => prevState + 0);
+                        }}>
                         <input type="radio" id="toTheWall" name="mounting" />
                         <label htmlFor="toTheWall"><img src={toTheWall} alt="Do ściany" /></label>
                     </div>
@@ -27,8 +27,8 @@ function SelectMounting({ onSelectionMounting, setPrice }) {
                     <p className="mounting__title">Na podporach</p>
                     <div className="mounting__img"
                         onClick={() => {
-                            onSelectionMounting("na podporach");
-                            setPrice(10);
+                            setMounting("na podporach");
+                            setPrice(price + 10);
                         }}>
                         <input type="radio" id="onSupports" name="mounting" />
                         <label htmlFor="onSupports"><img src={onSupports} alt="Na podporach" /></label>

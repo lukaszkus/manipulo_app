@@ -1,13 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../../components/Main/SelectShipping.scss'
 
-function SelectShipping() {
-    const [isChecked, setIsChecked] = useState(false);
+function SelectShipping({ setPrice, setShipping }) {
 
-    const handleChange = event => {
-        setIsChecked(true);
-        console.log(isChecked);
-    }
+    const shippingPrices = [
+        {
+            id: 1,
+            name: "Przedpłata na konto",
+            price: 29,
+        },
+        {
+            id: 2,
+            name: "Płatność przy odbiorze (pobranie)",
+            price: 39,
+        },
+        {
+            id: 3,
+            name: "Odbiór osobisty (Niepołomice, Kraków)",
+            price: 0,
+        }
+    ]
 
     return (
         <div className="animate">
@@ -27,19 +39,21 @@ function SelectShipping() {
                 </div>
                 <div className="selectShipping__container">
                     <p className="selectShipping__title">Ceny przesyłek krajowych</p>
-                    <ul className="selectShipping__list" onChange={handleChange}>
-                        <li>
-                            <input type="radio" name="shipping" value="29" />
-                            <label>Przedpłata na konto – 29 zł</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="shipping" value="39" />
-                            <label>Płatność przy odbiorze (pobranie) – 39 zł</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="shipping" value="0" />
-                            <label>Odbiór osobisty (Niepołomice, Kraków) – 0 zł</label>
-                        </li>
+                    <ul className="selectShipping__list">
+                        {shippingPrices.map((el, id) => {
+                            return (
+                                <li key={id}>
+                                    <div className="color-box"
+                                        onClick={() => {
+                                            setPrice((prevState) => prevState + el.price);
+                                            setShipping(el.name);
+                                        }}>
+                                        <input type="radio" id={id} value={el.price} name="shipping" />
+                                        <label htmlFor={id}>{el.name} - {el.price} zł</label>
+                                    </div>
+                                </li>
+                            );
+                        })}
                     </ul>
 
                 </div>
