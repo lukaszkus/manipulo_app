@@ -3,7 +3,7 @@ import './Welcome.scss';
 import logo from '../../assets/logo_mb.svg';
 
 
-function Welcome(props) {
+function Welcome({ click }) {
   return (
     <div className="welcome">
       <div className="container">
@@ -14,12 +14,12 @@ function Welcome(props) {
               <h1>Witaj</h1>
               <p>Skonfiguruj i zamów swoją tablicę manipulacyjną.</p>
             </div>
-            <button onClick={props.click}>ROZPOCZNIJ</button>
+            <button onClick={ click }>ROZPOCZNIJ</button>
           </div>
           <div className="welcome__footer">
             <div className="welcome--copyright">
               <p>Copyright &copy;</p>
-              <a href="https://www.manipuloboards.pl"><img src={logo} alt="Logo" className="copyright__logo" /></a>
+              <a href="https://www.manipuloboards.pl"><img src={ logo } alt="Logo" className="copyright__logo" /></a>
             </div>
           </div>
         </div>

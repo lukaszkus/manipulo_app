@@ -6,43 +6,43 @@ function Nav({ step, prevStep, nextStep, sendEmail }) {
     <div className="dash__nav">
       {step === 1 &&
         <div className="navigation btn-right">
-          <button onClick={nextStep}>DALEJ {'>>'}</button>
+          <button onClick={ nextStep }>DALEJ { '>>' }</button>
         </div>
       }
       {step === 2 &&
         <div className="navigation">
-          <button onClick={prevStep}>{'<<'} WRÓĆ</button>
-          <button onClick={nextStep}>DALEJ {'>>'}</button>
+          <button onClick={ prevStep }>{ '<<' } WRÓĆ</button>
+          <button onClick={ nextStep }>DALEJ { '>>' }</button>
         </div>
       }
       {step === 3 &&
         <div className="navigation">
-          <button onClick={prevStep}>{'<<'} WRÓĆ</button>
-          <button onClick={nextStep}>DALEJ {'>>'}</button>
+          <button onClick={ prevStep }>{ '<<' } WRÓĆ</button>
+          <button onClick={ nextStep }>DALEJ { '>>' }</button>
         </div>
       }
       {step === 4 &&
         <div className="navigation">
-          <button onClick={prevStep}>{'<<'} WRÓĆ</button>
-          <button onClick={nextStep}>DALEJ {'>>'}</button>
+          <button onClick={ prevStep }>{ '<<' } WRÓĆ</button>
+          <button onClick={ nextStep }>DALEJ { '>>' }</button>
         </div>
       }
       {step === 5 &&
         <div className="navigation">
-          <button onClick={prevStep}>{'<<'} WRÓĆ</button>
-          <button onClick={nextStep}>DALEJ {'>>'}</button>
+          <button onClick={ prevStep }>{ '<<' } WRÓĆ</button>
+          <button onClick={ nextStep }>DALEJ { '>>' }</button>
         </div>
       }
       {step === 6 &&
         <div className="navigation">
-          <button onClick={prevStep}>{'<<'} WRÓĆ</button>
-          <button onClick={nextStep}>DALEJ {'>>'}</button>
+          <button onClick={ prevStep }>{ '<<' } WRÓĆ</button>
+          <button onClick={ nextStep }>DALEJ { '>>' }</button>
         </div>
       }
       {step === 7 &&
         <div className="navigation">
-          <button onClick={prevStep}>{'<<'} WRÓĆ</button>
-          <button type="submit">WYŚLIJ</button>
+          <button onClick={ prevStep }>{ '<<' } WRÓĆ</button>
+          {/* <button onClick={ sendEmail }>WYŚLIJ</button> */ }
         </div>
       }
     </div>

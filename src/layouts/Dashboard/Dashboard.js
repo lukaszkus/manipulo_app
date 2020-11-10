@@ -99,82 +99,83 @@ function Dashboard() {
           <p className="logo__title">| Konfigurator</p>
         </div>
         <div className="dashboard__header">
-          <Header step={step} />
+          <Header step={ step } />
         </div>
         <div className="dashboard__sidebar">
           <UserConfiguration
-            color={color}
-            elements={elements}
-            mounting={mounting}
-            mainColor={mainColor}
-            spotColors={spotColors}
-            pictures={pictures}
-            shipping={shipping}
-            name={name}
-            adress={adress}
-            postCode={postCode}
-            city={city}
-            email={email}
-            phone={phone} />
+            color={ color }
+            elements={ elements }
+            mounting={ mounting }
+            mainColor={ mainColor }
+            spotColors={ spotColors }
+            pictures={ pictures }
+            shipping={ shipping }
+            name={ name }
+            adress={ adress }
+            postCode={ postCode }
+            city={ city }
+            email={ email }
+            phone={ phone } />
         </div>
         <div className="dashboard__price">
-          <Price price={price} setPrice={setPrice} />
+          <Price price={ price } setPrice={ setPrice } />
         </div>
         <div className="dashboard__main">
-          {step === 1 &&
+          { step === 1 &&
             <SelectColor
-              color={color} setColor={setColor}
-              price={price} setPrice={setPrice} />}
-          {step === 2 &&
+              color={ color } setColor={ setColor }
+              price={ price } setPrice={ setPrice } /> }
+          { step === 2 &&
             <SelectElements
-              elements={elements} setElements={setElements}
-              price={price} setPrice={setPrice} />}
-          {step === 3 &&
+              elements={ elements } setElements={ setElements }
+              price={ price } setPrice={ setPrice } /> }
+          { step === 3 &&
             <SelectMounting
-              mounting={mounting} setMounting={setMounting}
-              price={price} setPrice={setPrice} />}
-          {step === 4 &&
+              mounting={ mounting } setMounting={ setMounting }
+              price={ price } setPrice={ setPrice } /> }
+          { step === 4 &&
             <SelectOtherElements
-              mainColor={mainColor} setMainColor={setMainColor}
-              spotColors={spotColors} setSpotColors={setSpotColors}
-              theme={theme} setTheme={setTheme}
-              comment={comment} setComment={setComment}
-              onDrop={onDrop}
-              pictures={pictures} setPictures={setPictures} />}
-          {step === 5 && <SelectShipping
-            shipping={shipping} setShipping={setShipping}
-            price={price} setPrice={setPrice} />}
-          {step === 6 && <UserDataForm
-            name={name} setName={setName}
-            adress={adress} setAdress={setAdress}
-            postCode={postCode} setPostCode={setPostCode}
-            city={city} setCity={setCity}
-            email={email} setEmail={setEmail}
-            phone={phone} setPhone={setPhone}
-            shippingName={shippingName} setShippingName={setShippingName}
-          />}
-          {step === 7 && <OrderSummary
-            price={price}
-            color={color}
-            elements={elements}
-            mounting={mounting}
-            mainColor={mainColor}
-            spotColors={spotColors}
-            pictures={pictures}
-            shipping={shipping}
-            name={name}
-            adress={adress}
-            postCode={postCode}
-            city={city}
-            email={email}
-            phone={phone}
-            shippingName={shippingName} />}
+              mainColor={ mainColor } setMainColor={ setMainColor }
+              spotColors={ spotColors } setSpotColors={ setSpotColors }
+              theme={ theme } setTheme={ setTheme }
+              comment={ comment } setComment={ setComment }
+              onDrop={ onDrop }
+              pictures={ pictures } setPictures={ setPictures } /> }
+          { step === 5 && <SelectShipping
+            shipping={ shipping } setShipping={ setShipping }
+            price={ price } setPrice={ setPrice } /> }
+          { step === 6 && <UserDataForm
+            name={ name } setName={ setName }
+            adress={ adress } setAdress={ setAdress }
+            postCode={ postCode } setPostCode={ setPostCode }
+            city={ city } setCity={ setCity }
+            email={ email } setEmail={ setEmail }
+            phone={ phone } setPhone={ setPhone }
+            shippingName={ shippingName } setShippingName={ setShippingName }
+          /> }
+          { step === 7 && <OrderSummary
+            price={ price }
+            color={ color }
+            elements={ elements }
+            mounting={ mounting }
+            mainColor={ mainColor }
+            spotColors={ spotColors }
+            comment={ comment }
+            pictures={ pictures }
+            shipping={ shipping }
+            name={ name }
+            adress={ adress }
+            postCode={ postCode }
+            city={ city }
+            email={ email }
+            phone={ phone }
+            shippingName={ shippingName } /> }
         </div>
         <div className="dashboard__footer">
           <Copyright />
         </div>
         <div className="dashboard__nav">
-          <Nav nextStep={nextStep} prevStep={prevStep} step={step} />
+          <Nav nextStep={ nextStep } prevStep={ prevStep } step={ step } />
         </div>
       </div>
     </div>

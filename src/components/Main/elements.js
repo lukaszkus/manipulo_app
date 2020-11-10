@@ -1,15 +1,15 @@
 export const elementsData = [
     {
-        "id": 1,
-        "name": "Bucik",
-        "price": 15,
-        "url": require("../../assets/elements/bucik.png")
+        id: 1,
+        name: "Bucik",
+        price: 15,
+        url: require("../../assets/elements/bucik.png")
     },
     {
-        "id": 2,
-        "name": "Chmurka",
-        "price": 89,
-        "url": require("../../assets/elements/chmurka.png")
+        id: 2,
+        name: "Chmurka",
+        price: 89,
+        url: require("../../assets/elements/chmurka.png")
     },
     {
         "id": 3,

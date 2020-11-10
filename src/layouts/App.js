@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import Welcome from '../layouts/Welcome/Welcome';
 import Dashboard from './Dashboard/Dashboard';
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      {change ? <Dashboard /> : <Welcome click={handleChange}/>}
+      {change ? <Dashboard /> : <Welcome click={ handleChange } /> }
     </>
   );
 }
