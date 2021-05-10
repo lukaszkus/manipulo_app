@@ -40,10 +40,10 @@
     "price price"
     "nav nav"
     "footer footer";
-  column-gap: 10px;
+  // column-gap: 10px;
 }
 
-@media (min-width: 748px) {
+@media (min-width: 540px) {
   .dashboard__logo,
   .dashboard__sidebar {
     display: flex;
@@ -58,7 +58,7 @@
       "sidebar sidebar main main main main main main"
       "price price main main main main main main"
       "footer footer nav nav nav nav nav nav";
-    padding-right: 10px;
+    // padding-right: 10px;
   }
 }
 

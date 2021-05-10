@@ -5,6 +5,13 @@
   form {
     display: flex;
     width: 100%;
+    input, textarea {
+      font-size: 0.75rem;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      width: 100%;
+    }
     .orderSummary__container {
     padding: 10px;
     width: 100%;
@@ -16,11 +23,6 @@
     }
     p {
       font-size: 0.75rem;
-    }
-    input {
-      width: 100%;
-      font-size: 1rem;
-      padding: 5px;
     }
     button {
       margin-top: 20px;
@@ -47,9 +49,9 @@
     display: flex;
     flex-direction: column;
     // width: 100%;
-    .orderSummary__container {
-      // width: 50%;
-    }
+    // .orderSummary__container {
+    //   // width: 50%;
+    // }
   
   }
 }

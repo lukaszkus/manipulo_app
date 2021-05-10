@@ -6,7 +6,7 @@ import emailjs from 'emailjs-com';
 function OrderSummary({ color, price, elements, mounting, mainColor, spotColors, pictures, comment, shipping, name, adress, postCode, city, email, phone, shippingName }) {
 
     function sendEmail(e) {
-        e.preventDefault();
+        // e.preventDefault();
 
         emailjs.sendForm('contact_service', 'template_juqhqaj', e.target, 'user_WvSZcAY6mWCOgW15FUjXs')
             .then((result) => {
@@ -15,6 +15,7 @@ function OrderSummary({ color, price, elements, mounting, mainColor, spotColors,
                 console.log(error.text);
             });
     }
+
     const contact_number = Math.random() * 100000 | 0;
 
     return (

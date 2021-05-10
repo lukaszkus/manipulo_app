@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Dashboard.scss';
-// import emailjs from 'emailjs-com';
+import Modal from "../../components/Modal/Modal";
+import useModal from '../../components/Modal/useModal';
 
 import Header from '../../components/Header/Header';
 import Logo from '../../components/Logo/Logo';
@@ -21,8 +22,30 @@ function Dashboard() {
   const [step, setStep] = useState(1);
   const [color, setColor] = useState("");
   const [price, setPrice] = useState(0);
-  const [elements, setElements] = useState([]);
+  const [elements, setElements] = useState([{
+    id: 1,
+    name: "Bucik",
+    price: 15,
+  }]);
   const [mounting, setMounting] = useState("");
+  const { isShowing, toggle } = useModal();
+
+  const toggleSelected = (item) => {
+    if (typeof elements) {
+      const newElements = elements.filter((element) => {
+        return item.id !== element.id
+      })
+      setElements([...newElements]);
+    } else {
+      setElements([...elements, item])
+    }
+
+    const newElements = elements.filter((element) => {
+      return item.id !== element.id
+    })
+    setElements([...newElements]);
+  }
+
 
 
   //SelectOtherElements states
@@ -127,6 +150,7 @@ function Dashboard() {
               price={ price } setPrice={ setPrice } /> }
           { step === 2 &&
             <SelectElements
+              toggleSelected={ toggleSelected }
               elements={ elements } setElements={ setElements }
               price={ price } setPrice={ setPrice } /> }
           { step === 3 &&
@@ -175,8 +199,12 @@ function Dashboard() {
           <Copyright />
         </div>
         <div className="dashboard__nav">
-          <Nav nextStep={ nextStep } prevStep={ prevStep } step={ step } />
+          <Nav nextStep={ nextStep } prevStep={ prevStep } step={ step } toggle={ toggle } />
         </div>
+        <Modal
+          isShowing={ isShowing }
+          hide={ toggle }
+        />
       </div>
     </div>
   );

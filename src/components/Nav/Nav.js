@@ -1,9 +1,10 @@
 import React from 'react';
 import './Nav.scss';
 
-function Nav({ step, prevStep, nextStep, sendEmail }) {
+function Nav({ step, prevStep, nextStep, toggle }) {
   return (
     <div className="dash__nav">
+
       {step === 1 &&
         <div className="navigation btn-right">
           <button onClick={ nextStep }>DALEJ { '>>' }</button>
@@ -42,7 +43,7 @@ function Nav({ step, prevStep, nextStep, sendEmail }) {
       {step === 7 &&
         <div className="navigation">
           <button onClick={ prevStep }>{ '<<' } WRÓĆ</button>
-          {/* <button onClick={ sendEmail }>WYŚLIJ</button> */ }
+          <button>WYŚLIJ</button>
         </div>
       }
     </div>
